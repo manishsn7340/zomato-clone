@@ -16,17 +16,11 @@ app.use(cors())
 //db connection
 connectDB();
 
-
-//api endpoint
-<<<<<<< HEAD
-app.use("/api/food",foodRouter)
-app.use("/images",express.static('upload'))
-app.use("/api/user",userRouter)
-app.use("/api/cart",cartRouter)
-=======
 app.use("/api/food", foodRouter)
 app.use("/images", express.static('uploads'))
->>>>>>> c7e15fe (Add admin panel)
+app.use("/api/user", userRouter)
+app.use("/api/cart", cartRouter)
+
 
 app.get("/", (req, res) => {
     res.send("API WORKING")
