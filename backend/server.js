@@ -20,11 +20,11 @@ connectDB();
 
 
 //api endpoint
-app.use("/api/food",foodRouter)
-app.use("/images",express.static('upload'))
-app.use("/api/user",userRouter)
-app.use("/api/cart",cartRouter)
-app.use("/api/order",orderRouter)
+app.use("/api/food", foodRouter)
+app.use("/images", express.static('uploads'))
+app.use("/api/user", userRouter)
+app.use("/api/cart", cartRouter)
+app.use("/api/order", orderRouter)
 
 
 app.get("/", (req, res) => {
