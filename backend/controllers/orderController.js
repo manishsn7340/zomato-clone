@@ -9,7 +9,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 //placing user order for frontend
 const placeOrder = async(req, res) => {
-    const frontend_url = "htpp://localhost:5173"
+    const frontend_url = "htpp://localhost:5175"
     try {
         const newOrder = new orderModel({
             userId: req.body.userId,
@@ -78,6 +78,19 @@ const placeOrder = async(req, res) => {
         }
 
     }
+//Listing orders for admin panel
+const listOrders = async (req,res) => {
+  try {
+    const orders = await orderModel.find({});
+    res.json({success:true,data:orders})
+  } catch (error) {
+    console.log(error)
+    res.json({success:false,message:"Error"})
+  }
+
+}
+
+
 // api for updating order status
 const updateStatus = async (req,res) => {
 try {
