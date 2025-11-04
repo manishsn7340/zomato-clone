@@ -33,7 +33,7 @@ const MyOrders = () => {
       <h2>My Orders</h2>
       <div className="container">
         {data.map((order, index) => (
-          <div key={index} className="my-orders-order">
+          <div key={order._id} className="my-orders-order">
             <img src={assets.parcel_icon} alt="" />
             <p>
               {order.items.map((item, index) => {

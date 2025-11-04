@@ -1,6 +1,6 @@
 import React from 'react'
 import './Orders.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {toast} from 'react-toastify'
 import axios from 'axios'
 import {assets} from "../../assets/assets"
@@ -41,7 +41,7 @@ toast.error("Error")
       <div className="order-list">
         {orders.map((order,index)=>(
           <div key={index} className="order-item">
-      <img src="{assets.parcel_icon}" alt="" />
+      <img src={assets.parcel_icon} alt="" />
       <div>
         <p className='order-item-food'>
           {order.items.map((item,index)=>{
@@ -60,7 +60,7 @@ toast.error("Error")
           <p>{order.address.street+","}</p>
           <p>{order.address.city+", "+order.address.state+", "+order.address.country+", "+order.address.zipcode}</p>
         </div>
-        <p class='order-item-phone'>
+        <p className='order-item-phone'>
           {order.address.phone}
         </p>
         </div>

@@ -1,11 +1,12 @@
+import 'dotenv/config' // <-- MOVED TO THE VERY TOP
 import express from 'express'
 import cors from 'cors'
 import { connectDB } from './config/db.js'
 import foodRouter from './routes/foodRoute.js'
 import userRouter from "./routes/userRoute.js"
-import 'dotenv/config'
 import cartRouter from './routes/cartRoute.js'
 import orderRouter from './routes/orderRoute.js'
+
 //app config
 const app = express()
 const port = 4000
@@ -16,8 +17,6 @@ app.use(cors())
 
 //db connection
 connectDB();
-
-
 
 //api endpoint
 app.use("/api/food", foodRouter)
@@ -34,7 +33,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(`server started  on http://localhost:${port}`)
 })
-
-
-//mongodb+srv://MMM:PROJECT2025@cluster0.jbnp9m6.mongodb.net/?
-//mongodb+srv://MMM:PROJECT2025@cluster0.jbnp9m6.mongodb.net/?appName=Cluster0
