@@ -40,7 +40,7 @@
   border-radius: 50px;
 }
 
-/* ✅ Responsiveness fixes */
+/* Responsiveness fixes */
 @media (max-width: 1050px) {
   .header-content {
     max-width: 60%;

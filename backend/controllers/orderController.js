@@ -69,7 +69,10 @@ const userOrders = async(req, res) => {
 }
 
 const verifyOrder = async(req, res) => {
+    console.log(">>> verifyOrder INPUT:", req.body);
+
     const { orderId, success } = req.body;
+    console.log(success);
     try {
         if (success === true || success === "true") {
             await orderModel.findByIdAndUpdate(orderId, { payment: true });
