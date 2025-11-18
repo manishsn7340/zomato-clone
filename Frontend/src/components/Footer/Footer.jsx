@@ -8,10 +8,11 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-            asperiores placeat veritatis officiis sunt voluptate numquam fuga
-            provident corporis recusandae, velit maxime eaque impedit magnam
-            aspernatur necessitatibus mollitia laudantium voluptatum?
+              Delicious meals delivered to your door.<br />
+              Made with love, served with speed. <br />
+              Safe, fresh, and hygienic. <br />
+              Your comfort food, one click away.<br />
+              <br />
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
@@ -32,13 +33,13 @@ const Footer = () => {
           <h2>GET IN TOUCH</h2>
           <ul>
             <li>+1-212-456-789</li>
-            <li>helpcanter@tomato.com</li>
+            <li>helpcanter@FoodBuddy.com</li>
           </ul>
         </div>
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2014 © Tomato.com -All Right Reserved.
+        Copyright 2014 © FoodBuddy.com -All Right Reserved.
       </p>
     </div>
   );
